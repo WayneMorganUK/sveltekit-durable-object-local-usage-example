@@ -1,0 +1,3 @@
+packages:
+  - "do-worker"
+  - "sveltekit-app"

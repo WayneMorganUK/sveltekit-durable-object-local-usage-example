@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sveltekit-app",
+  "compatibility_date": "2026-01-20",
+  "compatibility_flags": ["nodejs_als"],
+  "pages_build_output_dir": ".svelte-kit/cloudflare",
+  "observability": {
+    "enabled": true
+  },
+  "kv_namespaces": [
+    {
+      "binding": "EXAMPLE_KV",
+      "id": "preview-id",
+      "preview_id": "preview-id",
+      "remote": false
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "MY_DO",
+        "class_name": "DurableObjectClass",
+        "script_name": "do-worker"
+      }
+    ]
+  }
+}

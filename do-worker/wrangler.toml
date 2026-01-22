@@ -1,11 +1,12 @@
 name = "do-worker"
 main = "src/index.ts"
-compatibility_date = "2024-04-05"
+compatibility_date = "2026-01-20"
 
 
-kv_namespaces = [
-  { binding = "EXAMPLE_KV", id = "a-shared-id" }
-]
+[[kv_namespaces]]
+binding = "EXAMPLE_KV"
+id = "preview-id"
+preview_id = "preview-id"
 
 [[durable_objects.bindings]]
 name = "MY_DO"

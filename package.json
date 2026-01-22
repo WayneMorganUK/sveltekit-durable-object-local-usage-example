@@ -11,5 +11,8 @@
     "start": "node dev.mjs"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "wrangler": "latest"
+  }
 }

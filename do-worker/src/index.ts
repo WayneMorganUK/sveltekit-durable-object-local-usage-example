@@ -23,9 +23,20 @@ export class DurableObjectClass {
 		this.state = state;
 		this.env = env;
 	}
-
 	async fetch() {
-		this.env.EXAMPLE_KV.put("my_key", "Hello back to you");
-	  return new Response("Hello from DurableObject!");
+		console.log('DO: Received request');
+
+		try {
+			await this.env.EXAMPLE_KV.put("my_key", "Hello back to you");
+			console.log('DO: KV write completed');
+
+			const readBack = await this.env.EXAMPLE_KV.get("my_key");
+			console.log('DO: Read back from KV:', readBack);
+
+			return new Response(`Hello from DO! Wrote to KV and read back: ${readBack}`);
+		} catch (error) {
+			console.error('DO: Error with KV:', error);
+			return new Response(`DO Error: ${error}`, { status: 500 });
+		}
 	}
 }

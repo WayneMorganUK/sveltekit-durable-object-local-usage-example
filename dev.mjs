@@ -30,7 +30,7 @@ wranglerDevProcess.on("SIGTERM", () => {
 
 await wranglerDevPromise;
 
-execSync("npm run dev", {
-  cwd: resolve(__dirname, "sveltekit-app"),
+execSync("pnpm run dev", {
+  cwd: resolve(__dirname, "sveltekit-do-app"),
   stdio: "inherit",
 });
