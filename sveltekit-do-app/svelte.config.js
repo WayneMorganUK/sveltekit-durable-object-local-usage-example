@@ -8,11 +8,19 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
+		experimental: {
+			remoteFunctions: true
+		},
 		adapter: adapter({
 			platformProxy: {
 				persist: { path: '../.wrangler/v3' }
 			}
 		})
+	},
+	compilerOptions: {
+		experimental: {
+			async: true
+		}
 	}
 };
 
