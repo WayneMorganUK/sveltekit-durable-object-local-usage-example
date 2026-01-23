@@ -21,3 +21,21 @@ To run the example:
     ![home](./home.png)
 
     showing a message that gets fetched from the Worker's durable object and displayed in the SvelteKit application
+
+## Deploying to Cloudflare
+
+- create a KV Namespace 
+ 
+ ```sh
+ $ pnpm dlx wrangler kv namespace create EXAMPLE_KV
+ ```
+
+- update both wrangler files with the kv namespace id
+
+ in both app directories execute the following:
+
+ ```sh
+ $ pnpm run deploy
+ ```
+
+

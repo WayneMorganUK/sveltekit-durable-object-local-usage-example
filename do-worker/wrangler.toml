@@ -5,9 +5,13 @@ compatibility_date = "2026-01-20"
 
 [[kv_namespaces]]
 binding = "EXAMPLE_KV"
-id = "preview-id"
+id = "a030eec289404caaab49ee5b5f65a03a"
 preview_id = "preview-id"
 
 [[durable_objects.bindings]]
 name = "MY_DO"
 class_name = "DurableObjectClass"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["DurableObjectClass"]
