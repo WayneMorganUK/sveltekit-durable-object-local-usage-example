@@ -1,2 +1,6 @@
 node_modules
 .wrangler
+.gemini
+CLAUDE.md
+GEMINI.md
+.mcp.json

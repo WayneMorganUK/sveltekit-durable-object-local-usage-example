@@ -12,7 +12,7 @@ const wranglerDevProcess = fork(
   join(__dirname, "node_modules", "wrangler", "bin", "wrangler.js"),
   ["dev", "--persist-to", "../.wrangler"],
   {
-    cwd: resolve(__dirname, "do-worker"),
+    cwd: resolve(__dirname, "do-kv-worker"),
     env: { BROWSER: "none", ...process.env },
     stdio: ["ignore", process.stdout, process.stderr, "ipc"],
   }

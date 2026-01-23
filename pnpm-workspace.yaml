@@ -1,5 +1,5 @@
 packages:
-  - "do-worker"
+  - "do-kv-worker"
   - "sveltekit-app"
 onlyBuiltDependencies:
   - esbuild
