@@ -143,6 +143,17 @@ pnpm run deploy
 
 Feel free to fork this repository and use it as a starting point for your own Cloudflare + SvelteKit projects!
 
+## 📖 Credits
+
+This project is based on and inspired by [dario-piotrowicz/sveltekit-durable-object-local-usage-example](https://github.com/dario-piotrowicz/sveltekit-durable-object-local-usage-example). Special thanks to **[Dario Piotrowicz](https://github.com/dario-piotrowicz)** for creating an excellent foundation for SvelteKit + Durable Object integration.
+
+## ⚠️ Experimental Features
+
+This project utilizes **SvelteKit's experimental `remoteFunctions` feature**. Please note:
+- `remoteFunctions` is still in active development and may change
+- Use in production with caution and monitor SvelteKit releases for updates
+- Check the [SvelteKit documentation](https://kit.svelte.dev/) for the latest status and best practices
+
 ## 📄 License
 
 This project is open source and available under the MIT License.
